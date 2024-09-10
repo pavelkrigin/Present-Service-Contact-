@@ -7,39 +7,23 @@
 
 import Foundation
 
-protocol CityListInteractorProtocol: AnyObject {
-    func fetchCities()
+protocol SearchCityInteractorProtocol: AnyObject {
+    func searchCity(_ cityName: String)
 }
 
-class CityListInteractor: CityListInteractorProtocol {
-    var presenter: CityListPresenterProtocol?
+class SearchCityInteractor: SearchCityInteractorProtocol {
+    var presenter: SearchCityPresenterProtocol?
     let weatherService = WeatherService()
     
-    func fetchCities() {
-        // Пример городов
-        let cities = ["Moscow", "London"]
-        var cityObjects: [City] = []
-        
-        let dispatchGroup = DispatchGroup()
-        
-        for city in cities {
-            dispatchGroup.enter()
-            weatherService.fetchWeather(for: city) { result in
-                switch result {
-                case .success(let data):
-                    let cityObject = City(name: data.name, temperature: data.main.temp)
-                    cityObjects.append(cityObject)
-                case .failure(let error):
-                    print(error)
-                }
-                dispatchGroup.leave()
+    func searchCity(_ cityName: String) {
+        weatherService.fetchWeather(for: cityName) { result in
+            switch result {
+            case .success(let data):
+                let city = City(name: data.name, temperature: data.main.temp)
+                self.presenter?.didFetchCity(city)
+            case .failure:
+                self.presenter?.didFailToFetchCity("City not found")
             }
-        }
-        
-        dispatchGroup.notify(queue: .main) {
-            self.presenter?.didFetchCities(cityObjects)
         }
     }
 }
-
-

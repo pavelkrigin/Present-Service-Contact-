@@ -59,3 +59,10 @@ extension CityListViewController: CityListViewProtocol {
         tableView.reloadData()
     }
 }
+
+extension CityListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = cities[indexPath.row]
+        presenter?.showCityDetail(for: city.name)
+    }
+}

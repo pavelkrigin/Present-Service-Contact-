@@ -9,6 +9,7 @@ import UIKit
 
 protocol CityListRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
+    func navigateToCityDetail(from view: CityListViewProtocol, for city: String)
 }
 
 class CityListRouter: CityListRouterProtocol {
@@ -26,5 +27,13 @@ class CityListRouter: CityListRouterProtocol {
         interactor.presenter = presenter
         
         return view
+    }
+    
+    func navigateToCityDetail(from view: CityListViewProtocol, for city: String) {
+        let cityDetailViewController = CityDetailRouter.createModule(for: city)
+        
+        if let viewController = view as? UIViewController {
+            viewController.navigationController?.pushViewController(cityDetailViewController, animated: true)
+        }
     }
 }
