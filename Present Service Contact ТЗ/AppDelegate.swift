@@ -8,12 +8,16 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+final class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let rootViewController = CityListRouter.createModule() // VIPER модуль списка городов
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        window?.makeKeyAndVisible()
         return true
     }
 
