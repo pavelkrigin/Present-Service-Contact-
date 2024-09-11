@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CAD910212C90954D00EF1009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910202C90954D00EF1009 /* AppDelegate.swift */; };
 		CAD910232C90954D00EF1009 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910222C90954D00EF1009 /* SceneDelegate.swift */; };
-		CAD910252C90954D00EF1009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910242C90954D00EF1009 /* ViewController.swift */; };
 		CAD910282C90954D00EF1009 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAD910272C90954D00EF1009 /* Base */; };
 		CAD9102A2C90954F00EF1009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD910292C90954F00EF1009 /* Assets.xcassets */; };
 		CAD9102D2C90954F00EF1009 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAD9102C2C90954F00EF1009 /* Base */; };
@@ -34,7 +33,6 @@
 		CAD9101D2C90954D00EF1009 /* Present Service Contact ТЗ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Present Service Contact ТЗ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD910202C90954D00EF1009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD910222C90954D00EF1009 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAD910242C90954D00EF1009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAD910272C90954D00EF1009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAD910292C90954F00EF1009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD9102C2C90954F00EF1009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,12 +84,9 @@
 		CAD9101F2C90954D00EF1009 /* Present Service Contact ТЗ */ = {
 			isa = PBXGroup;
 			children = (
+				CAD910BD2C91B57E00EF1009 /* Services */,
+				CAD910B92C91B4C600EF1009 /* Models */,
 				CAD910492C90C99400EF1009 /* Application */,
-				CAD910442C90AF9F00EF1009 /* Router */,
-				CAD910412C90AF6100EF1009 /* Presenter */,
-				CAD9103E2C90AEC900EF1009 /* Interactor */,
-				CAD9103B2C90AE7C00EF1009 /* View */,
-				CAD9103A2C90AE3700EF1009 /* Entity */,
 				CAD9102E2C90954F00EF1009 /* Info.plist */,
 			);
 			path = "Present Service Contact ТЗ";
@@ -110,10 +105,7 @@
 		CAD9103B2C90AE7C00EF1009 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910242C90954D00EF1009 /* ViewController.swift */,
-				CAD9103C2C90AEA400EF1009 /* CityListViewController.swift */,
 				CAD9104A2C90CAD100EF1009 /* SearchCityViewController.swift */,
-				CAD9104C2C90CC6D00EF1009 /* CityDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,9 +113,6 @@
 		CAD9103E2C90AEC900EF1009 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				CAD9103F2C90AF0300EF1009 /* CityListInteractor.swift */,
-				CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */,
-				CAD910342C90AD0300EF1009 /* WeatherService.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -131,8 +120,6 @@
 		CAD910412C90AF6100EF1009 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910422C90AF7A00EF1009 /* CityListPresenter.swift */,
-				CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */,
 				CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */,
 			);
 			path = Presenter;
@@ -141,8 +128,6 @@
 		CAD910442C90AF9F00EF1009 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910452C90AFC200EF1009 /* CityListRouter.swift */,
-				CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */,
 				CAD910562C90F08800EF1009 /* SearchCityRouter.swift */,
 			);
 			path = Router;
@@ -158,6 +143,66 @@
 				CAD910202C90954D00EF1009 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		CAD910B92C91B4C600EF1009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910BA2C91B4DD00EF1009 /* Modules */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAD910BA2C91B4DD00EF1009 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910BF2C91C8BE00EF1009 /* VIPR */,
+				CAD9103A2C90AE3700EF1009 /* Entity */,
+				CAD910BC2C91B53500EF1009 /* CityDetails */,
+				CAD910BB2C91B4EA00EF1009 /* CitiesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CAD910BB2C91B4EA00EF1009 /* CitiesList */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910452C90AFC200EF1009 /* CityListRouter.swift */,
+				CAD910422C90AF7A00EF1009 /* CityListPresenter.swift */,
+				CAD9103F2C90AF0300EF1009 /* CityListInteractor.swift */,
+				CAD9103C2C90AEA400EF1009 /* CityListViewController.swift */,
+			);
+			path = CitiesList;
+			sourceTree = "<group>";
+		};
+		CAD910BC2C91B53500EF1009 /* CityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */,
+				CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */,
+				CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */,
+				CAD9104C2C90CC6D00EF1009 /* CityDetailViewController.swift */,
+			);
+			path = CityDetails;
+			sourceTree = "<group>";
+		};
+		CAD910BD2C91B57E00EF1009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910342C90AD0300EF1009 /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CAD910BF2C91C8BE00EF1009 /* VIPR */ = {
+			isa = PBXGroup;
+			children = (
+				CAD910442C90AF9F00EF1009 /* Router */,
+				CAD910412C90AF6100EF1009 /* Presenter */,
+				CAD9103E2C90AEC900EF1009 /* Interactor */,
+				CAD9103B2C90AE7C00EF1009 /* View */,
+			);
+			path = VIPR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +286,6 @@
 				CAD9104F2C90CCA900EF1009 /* CityDetailInteractor.swift in Sources */,
 				CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */,
 				CAD910462C90AFC200EF1009 /* CityListRouter.swift in Sources */,
-				CAD910252C90954D00EF1009 /* ViewController.swift in Sources */,
 				CAD9104D2C90CC6D00EF1009 /* CityDetailViewController.swift in Sources */,
 				CAD910482C90B00400EF1009 /* City.swift in Sources */,
 				CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */,
