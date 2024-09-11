@@ -16,7 +16,6 @@ class CityDetailRouter: CityDetailRouterProtocol {
         let view = CityDetailViewController()
         let presenter = CityDetailPresenter(cityName: city)
         let interactor = CityDetailInteractor()
-        let router: CityDetailRouterProtocol = CityDetailRouter()
         
         view.presenter = presenter
         presenter.view = view

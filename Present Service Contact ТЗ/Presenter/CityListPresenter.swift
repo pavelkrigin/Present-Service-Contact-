@@ -7,35 +7,9 @@
 
 import Foundation
 
-protocol SearchCityPresenterProtocol: AnyObject {
-    func searchCity(_ cityName: String)
-    func didFetchCity(_ city: City)
-    func didFailToFetchCity(_ error: String)
-}
-
-class SearchCityPresenter: SearchCityPresenterProtocol {
-    weak var view: SearchCityViewProtocol?
-    var interactor: SearchCityInteractorProtocol?
-    var router: SearchCityRouterProtocol?
-    var cityListInteractor: CityListInteractorProtocol?
-    
-    func searchCity(_ cityName: String) {
-        interactor?.searchCity(cityName)
-    }
-    
-    func didFetchCity(_ city: City) {
-        cityListInteractor?.saveCity(city)
-        router?.dismissSearch()
-    }
-    
-    func didFailToFetchCity(_ error: String) {
-        view?.showError(error)
-    }
-}
-
 protocol CityListPresenterProtocol: AnyObject {
     func viewDidLoad()
-    func didFetchCities(_ cities: [City])
+    func showCitySearch()
     func showCityDetail(for city: String)
 }
 
@@ -48,11 +22,17 @@ class CityListPresenter: CityListPresenterProtocol {
         interactor?.fetchCities()
     }
     
-    func didFetchCities(_ cities: [City]) {
-        view?.showCities(cities)
+    func showCitySearch() {
+        router?.navigateToCitySearch(from: view!)
     }
     
     func showCityDetail(for city: String) {
         router?.navigateToCityDetail(from: view!, for: city)
+    }
+}
+
+extension CityListPresenter: CityListInteractorOutputProtocol {
+    func didFetchCities(_ cities: [City]) {
+        view?.showCities(cities)
     }
 }

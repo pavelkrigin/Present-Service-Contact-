@@ -9,13 +9,14 @@ import UIKit
 
 protocol CityListRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
+    func navigateToCitySearch(from view: CityListViewProtocol)
     func navigateToCityDetail(from view: CityListViewProtocol, for city: String)
 }
 
 class CityListRouter: CityListRouterProtocol {
     static func createModule() -> UIViewController {
         let view = CityListViewController()
-        let presenter: CityListPresenterProtocol & CityListInteractorProtocol = CityListPresenter()
+        let presenter: CityListPresenterProtocol & CityListInteractorOutputProtocol = CityListPresenter()
         let interactor: CityListInteractorProtocol = CityListInteractor()
         let router: CityListRouterProtocol = CityListRouter()
         
@@ -23,17 +24,22 @@ class CityListRouter: CityListRouterProtocol {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        
         interactor.presenter = presenter
         
         return view
     }
     
-    func navigateToCityDetail(from view: CityListViewProtocol, for city: String) {
-        let cityDetailViewController = CityDetailRouter.createModule(for: city)
-        
+    func navigateToCitySearch(from view: CityListViewProtocol) {
+        let searchVC = SearchCityRouter.createModule(cityListInteractor: view.presenter!.interactor as! CityListInteractor)
         if let viewController = view as? UIViewController {
-            viewController.navigationController?.pushViewController(cityDetailViewController, animated: true)
+            viewController.navigationController?.pushViewController(searchVC, animated: true)
+        }
+    }
+    
+    func navigateToCityDetail(from view: CityListViewProtocol, for city: String) {
+        let cityDetailVC = CityDetailRouter.createModule(for: city)
+        if let viewController = view as? UIViewController {
+            viewController.navigationController?.pushViewController(cityDetailVC, animated: true)
         }
     }
 }

@@ -11,56 +11,56 @@ protocol CityListViewProtocol: AnyObject {
     func showCities(_ cities: [City])
 }
 
-class CityListViewController: UIViewController {
+class CityListViewController: UIViewController, CityListViewProtocol {
     var presenter: CityListPresenterProtocol?
-    
-    private var cities: [City] = []
+    var cities: [City] = []
     
     private let tableView = UITableView()
+    private let addButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Cities"
-        setupTableView()
+        view.backgroundColor = .white
+        setupUI()
         presenter?.viewDidLoad()
     }
     
-    private func setupTableView() {
-        view.addSubview(tableView)
+    private func setupUI() {
         tableView.frame = view.bounds
-        tableView.dataSource = self
         tableView.delegate = self
-    }
-}
-
-extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
-        return cities.count
+        tableView.dataSource = self
+        view.addSubview(tableView)
+        
+        addButton.setTitle("Add City", for: .normal)
+        addButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
+        addButton.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 50)
+        tableView.tableHeaderView = addButton
     }
     
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        let city = cities[indexPath.row]
-        cell.textLabel?.text = city.name
-        cell.detailTextLabel?.text = "\(city.temperature)°C"
-        return cell
+    @objc private func didTapAddButton() {
+        presenter?.showCitySearch()
     }
-}
-
-extension CityListViewController: CityListViewProtocol {
+    
     func showCities(_ cities: [City]) {
         self.cities = cities
         tableView.reloadData()
     }
 }
 
-extension CityListViewController: UITableViewDelegate {
+extension CityListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "CityCell")
+        let city = cities[indexPath.row]
+        cell.textLabel?.text = city.name
+        cell.detailTextLabel?.text = "\(city.temperature)°C"
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let city = cities[indexPath.row]
         presenter?.showCityDetail(for: city.name)

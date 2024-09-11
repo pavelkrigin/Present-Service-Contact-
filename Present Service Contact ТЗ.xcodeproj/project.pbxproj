@@ -26,6 +26,8 @@
 		CAD9104F2C90CCA900EF1009 /* CityDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */; };
 		CAD910512C90CCCA00EF1009 /* CityDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */; };
 		CAD910532C90CCE500EF1009 /* CityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */; };
+		CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */; };
+		CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910562C90F08800EF1009 /* SearchCityRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailInteractor.swift; sourceTree = "<group>"; };
 		CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailPresenter.swift; sourceTree = "<group>"; };
 		CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailRouter.swift; sourceTree = "<group>"; };
+		CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityPresenter.swift; sourceTree = "<group>"; };
+		CAD910562C90F08800EF1009 /* SearchCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			children = (
 				CAD910422C90AF7A00EF1009 /* CityListPresenter.swift */,
 				CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */,
+				CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				CAD910452C90AFC200EF1009 /* CityListRouter.swift */,
 				CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */,
+				CAD910562C90F08800EF1009 /* SearchCityRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -233,10 +239,12 @@
 				CAD910372C90AD5300EF1009 /* WeatherData.swift in Sources */,
 				CAD910402C90AF0300EF1009 /* CityListInteractor.swift in Sources */,
 				CAD9104F2C90CCA900EF1009 /* CityDetailInteractor.swift in Sources */,
+				CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */,
 				CAD910462C90AFC200EF1009 /* CityListRouter.swift in Sources */,
 				CAD910252C90954D00EF1009 /* ViewController.swift in Sources */,
 				CAD9104D2C90CC6D00EF1009 /* CityDetailViewController.swift in Sources */,
 				CAD910482C90B00400EF1009 /* City.swift in Sources */,
+				CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */,
 				CAD910212C90954D00EF1009 /* AppDelegate.swift in Sources */,
 				CAD910392C90AD9B00EF1009 /* ForecastData.swift in Sources */,
 				CAD910532C90CCE500EF1009 /* CityDetailRouter.swift in Sources */,

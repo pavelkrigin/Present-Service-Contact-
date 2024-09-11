@@ -8,50 +8,43 @@
 import UIKit
 
 protocol CityDetailViewProtocol: AnyObject {
-    func showWeatherDetails(_ details: WeatherData)
+    func showWeatherDetails(_ weather: WeatherData)
 }
 
-class CityDetailViewController: UIViewController {
+class CityDetailViewController: UIViewController, CityDetailViewProtocol {
     var presenter: CityDetailPresenterProtocol?
     
-    private let cityLabel = UILabel()
     private let temperatureLabel = UILabel()
+    private let descriptionLabel = UILabel()
     private let humidityLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Weather Details"
         view.backgroundColor = .white
         setupUI()
         presenter?.viewDidLoad()
     }
     
     private func setupUI() {
-        cityLabel.translatesAutoresizingMaskIntoConstraints = false
-        temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
-        humidityLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(cityLabel)
+        temperatureLabel.frame = CGRect(x: 20, y: 100, width: view.bounds.width - 40, height: 50)
+        temperatureLabel.textAlignment = .center
         view.addSubview(temperatureLabel)
-        view.addSubview(humidityLabel)
         
-        NSLayoutConstraint.activate([
-            cityLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            cityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            temperatureLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 20),
-            temperatureLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            humidityLabel.topAnchor.constraint(equalTo: temperatureLabel.bottomAnchor, constant: 20),
-            humidityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+        descriptionLabel.frame = CGRect(x: 20, y: 160, width: view.bounds.width - 40, height: 50)
+        descriptionLabel.textAlignment = .center
+        view.addSubview(descriptionLabel)
+        
+        humidityLabel.frame = CGRect(x: 20, y: 220, width: view.bounds.width - 40, height: 50)
+        humidityLabel.textAlignment = .center
+        view.addSubview(humidityLabel)
     }
-}
-
-extension CityDetailViewController: CityDetailViewProtocol {
-    func showWeatherDetails(_ details: WeatherData) {
-        cityLabel.text = details.name
-        temperatureLabel.text = "Temperature: \(details.main.temp)°C"
-        humidityLabel.text = "Humidity: \(details.main.humidity)%"
+    
+    func showWeatherDetails(_ weather: WeatherData) {
+        temperatureLabel.text = "Temperature: \(weather.main.temp)°C"
+        descriptionLabel.text = "Description: \(weather.weather.first?.description ?? "No data")"
+        humidityLabel.text = "Humidity: \(weather.main.humidity)%"
     }
+    
+    
 }
-
