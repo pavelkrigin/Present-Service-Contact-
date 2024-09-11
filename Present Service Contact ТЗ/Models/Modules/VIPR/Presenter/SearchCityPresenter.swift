@@ -17,7 +17,7 @@ class SearchCityPresenter: SearchCityPresenterProtocol {
     var cityListInteractor: SearchCityInteractorOutputProtocol?
     
     func searchCity(_ city: String) {
-        interactor?.fetchWeather(for: city)
+        interactor?.searchCity(<#T##cityName: String##String#>)
     }
 }
 

@@ -27,6 +27,7 @@
 		CAD910532C90CCE500EF1009 /* CityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */; };
 		CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */; };
 		CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910562C90F08800EF1009 /* SearchCityRouter.swift */; };
+		CAD910C12C91CCB200EF1009 /* SearchCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailRouter.swift; sourceTree = "<group>"; };
 		CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityPresenter.swift; sourceTree = "<group>"; };
 		CAD910562C90F08800EF1009 /* SearchCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityRouter.swift; sourceTree = "<group>"; };
+		CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		CAD9103E2C90AEC900EF1009 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				CAD910512C90CCCA00EF1009 /* CityDetailPresenter.swift in Sources */,
 				CAD910432C90AF7A00EF1009 /* CityListPresenter.swift in Sources */,
 				CAD9103D2C90AEA400EF1009 /* CityListViewController.swift in Sources */,
+				CAD910C12C91CCB200EF1009 /* SearchCityInteractor.swift in Sources */,
 				CAD910352C90AD0300EF1009 /* WeatherService.swift in Sources */,
 				CAD9104B2C90CAD100EF1009 /* SearchCityViewController.swift in Sources */,
 				CAD910372C90AD5300EF1009 /* WeatherData.swift in Sources */,
