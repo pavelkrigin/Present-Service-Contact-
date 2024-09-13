@@ -7,28 +7,28 @@
 
 import Foundation
 
-// MARK: - Protocol
-protocol CitiesListInteractorInput {
-    func fetchWeather(for city: String)
+// MARK: - CitiesListInteractorInput
+protocol CitiesListInteractorInput: AnyObject {
+    func fetchWeatherForCities(_ cities: [String])
 }
 
+// MARK: - CitiesListInteractorOutput
 protocol CitiesListInteractorOutput: AnyObject {
-    func didFetchWeather(city: City)
-    func didFailFetchingWeather(with error: Error)
+    func didFetchWeatherData(_ data: [String: Double])
+    func didFailFetchingWeatherData(with error: Error)
 }
 
-// MARK: - Class
 final class CitiesListInteractor: CitiesListInteractorInput {
     weak var presenter: CitiesListInteractorOutput?
     private let weatherAPI = WeatherAPI()
 
+    // Метод для получения погоды для списка городов
     func fetchWeatherForCities(_ cities: [String]) {
         var cityWeatherData: [String: Double] = [:]
-
-        let group = DispatchGroup()
+        let group = DispatchGroup() // Используется для группировки асинхронных запросов
 
         for city in cities {
-            group.enter()
+            group.enter() // Увеличение счетчика
             weatherAPI.fetchCurrentWeather(for: city) { result in
                 switch result {
                 case .success(let weather):
@@ -36,22 +36,12 @@ final class CitiesListInteractor: CitiesListInteractorInput {
                 case .failure(let error):
                     print("Failed to fetch weather for \(city): \(error)")
                 }
-                group.leave()
+                group.leave() // Уменьшение счетчика
             }
         }
 
-        group.notify(queue: .main) {
-            self.presenter?.didFetchWeatherData(cityWeatherData)
+        group.notify(queue: .main) { [weak self] in
+            self?.presenter?.didFetchWeatherData(cityWeatherData)
         }
     }
 }
-
-//// MARK: - Structure
-//struct WeatherResponse: Decodable {
-//    let name: String
-//    let main: MainWeather
-//}
-//
-//struct MainWeather: Decodable {
-//    let temp: Double
-//}
