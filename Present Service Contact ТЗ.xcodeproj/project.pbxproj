@@ -9,51 +9,41 @@
 /* Begin PBXBuildFile section */
 		CAD910212C90954D00EF1009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910202C90954D00EF1009 /* AppDelegate.swift */; };
 		CAD910232C90954D00EF1009 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910222C90954D00EF1009 /* SceneDelegate.swift */; };
-		CAD910282C90954D00EF1009 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAD910272C90954D00EF1009 /* Base */; };
 		CAD9102A2C90954F00EF1009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD910292C90954F00EF1009 /* Assets.xcassets */; };
 		CAD9102D2C90954F00EF1009 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAD9102C2C90954F00EF1009 /* Base */; };
-		CAD910352C90AD0300EF1009 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910342C90AD0300EF1009 /* WeatherService.swift */; };
-		CAD910372C90AD5300EF1009 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910362C90AD5300EF1009 /* WeatherData.swift */; };
-		CAD910392C90AD9B00EF1009 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910382C90AD9B00EF1009 /* ForecastData.swift */; };
 		CAD9103D2C90AEA400EF1009 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9103C2C90AEA400EF1009 /* CityListViewController.swift */; };
 		CAD910402C90AF0300EF1009 /* CityListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9103F2C90AF0300EF1009 /* CityListInteractor.swift */; };
 		CAD910432C90AF7A00EF1009 /* CityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910422C90AF7A00EF1009 /* CityListPresenter.swift */; };
 		CAD910462C90AFC200EF1009 /* CityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910452C90AFC200EF1009 /* CityListRouter.swift */; };
-		CAD910482C90B00400EF1009 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910472C90B00400EF1009 /* City.swift */; };
-		CAD9104B2C90CAD100EF1009 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9104A2C90CAD100EF1009 /* SearchCityViewController.swift */; };
 		CAD9104D2C90CC6D00EF1009 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9104C2C90CC6D00EF1009 /* CityDetailViewController.swift */; };
 		CAD9104F2C90CCA900EF1009 /* CityDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */; };
 		CAD910512C90CCCA00EF1009 /* CityDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */; };
 		CAD910532C90CCE500EF1009 /* CityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */; };
-		CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */; };
-		CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910562C90F08800EF1009 /* SearchCityRouter.swift */; };
-		CAD910C12C91CCB200EF1009 /* SearchCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */; };
+		CAD910CA2C94CDFC00EF1009 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910C92C94CDFC00EF1009 /* WeatherAPI.swift */; };
+		CAD910CC2C94CE6700EF1009 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910CB2C94CE6700EF1009 /* WeatherResponse.swift */; };
+		CAD910CE2C94CE8500EF1009 /* WeatherForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910CD2C94CE8500EF1009 /* WeatherForecastResponse.swift */; };
+		CAD910D02C94D46800EF1009 /* CityDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD910CF2C94D46800EF1009 /* CityDetailEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAD9101D2C90954D00EF1009 /* Present Service Contact ТЗ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Present Service Contact ТЗ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD910202C90954D00EF1009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD910222C90954D00EF1009 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAD910272C90954D00EF1009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAD910292C90954F00EF1009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD9102C2C90954F00EF1009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAD9102E2C90954F00EF1009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAD910342C90AD0300EF1009 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		CAD910362C90AD5300EF1009 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
-		CAD910382C90AD9B00EF1009 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		CAD9103C2C90AEA400EF1009 /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		CAD9103F2C90AF0300EF1009 /* CityListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListInteractor.swift; sourceTree = "<group>"; };
 		CAD910422C90AF7A00EF1009 /* CityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenter.swift; sourceTree = "<group>"; };
 		CAD910452C90AFC200EF1009 /* CityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListRouter.swift; sourceTree = "<group>"; };
-		CAD910472C90B00400EF1009 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		CAD9104A2C90CAD100EF1009 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 		CAD9104C2C90CC6D00EF1009 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailInteractor.swift; sourceTree = "<group>"; };
 		CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailPresenter.swift; sourceTree = "<group>"; };
 		CAD910522C90CCE500EF1009 /* CityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailRouter.swift; sourceTree = "<group>"; };
-		CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityPresenter.swift; sourceTree = "<group>"; };
-		CAD910562C90F08800EF1009 /* SearchCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityRouter.swift; sourceTree = "<group>"; };
-		CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityInteractor.swift; sourceTree = "<group>"; };
+		CAD910C92C94CDFC00EF1009 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		CAD910CB2C94CE6700EF1009 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		CAD910CD2C94CE8500EF1009 /* WeatherForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastResponse.swift; sourceTree = "<group>"; };
+		CAD910CF2C94D46800EF1009 /* CityDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,54 +76,12 @@
 		CAD9101F2C90954D00EF1009 /* Present Service Contact ТЗ */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910BD2C91B57E00EF1009 /* Services */,
-				CAD910B92C91B4C600EF1009 /* Models */,
+				CAD910BA2C91B4DD00EF1009 /* Modules */,
+				CAD910C22C94AFE300EF1009 /* Network */,
 				CAD910492C90C99400EF1009 /* Application */,
 				CAD9102E2C90954F00EF1009 /* Info.plist */,
 			);
 			path = "Present Service Contact ТЗ";
-			sourceTree = "<group>";
-		};
-		CAD9103A2C90AE3700EF1009 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910362C90AD5300EF1009 /* WeatherData.swift */,
-				CAD910382C90AD9B00EF1009 /* ForecastData.swift */,
-				CAD910472C90B00400EF1009 /* City.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		CAD9103B2C90AE7C00EF1009 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CAD9104A2C90CAD100EF1009 /* SearchCityViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CAD9103E2C90AEC900EF1009 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910C02C91CCB200EF1009 /* SearchCityInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		CAD910412C90AF6100EF1009 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910542C90F04600EF1009 /* SearchCityPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CAD910442C90AF9F00EF1009 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910562C90F08800EF1009 /* SearchCityRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		CAD910492C90C99400EF1009 /* Application */ = {
@@ -141,26 +89,15 @@
 			children = (
 				CAD9102B2C90954F00EF1009 /* LaunchScreen.storyboard */,
 				CAD910292C90954F00EF1009 /* Assets.xcassets */,
-				CAD910262C90954D00EF1009 /* Main.storyboard */,
 				CAD910222C90954D00EF1009 /* SceneDelegate.swift */,
 				CAD910202C90954D00EF1009 /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		CAD910B92C91B4C600EF1009 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910BA2C91B4DD00EF1009 /* Modules */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		CAD910BA2C91B4DD00EF1009 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910BF2C91C8BE00EF1009 /* VIPR */,
-				CAD9103A2C90AE3700EF1009 /* Entity */,
 				CAD910BC2C91B53500EF1009 /* CityDetails */,
 				CAD910BB2C91B4EA00EF1009 /* CitiesList */,
 			);
@@ -185,27 +122,19 @@
 				CAD910502C90CCCA00EF1009 /* CityDetailPresenter.swift */,
 				CAD9104E2C90CCA900EF1009 /* CityDetailInteractor.swift */,
 				CAD9104C2C90CC6D00EF1009 /* CityDetailViewController.swift */,
+				CAD910CF2C94D46800EF1009 /* CityDetailEntity.swift */,
 			);
 			path = CityDetails;
 			sourceTree = "<group>";
 		};
-		CAD910BD2C91B57E00EF1009 /* Services */ = {
+		CAD910C22C94AFE300EF1009 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CAD910342C90AD0300EF1009 /* WeatherService.swift */,
+				CAD910C92C94CDFC00EF1009 /* WeatherAPI.swift */,
+				CAD910CB2C94CE6700EF1009 /* WeatherResponse.swift */,
+				CAD910CD2C94CE8500EF1009 /* WeatherForecastResponse.swift */,
 			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		CAD910BF2C91C8BE00EF1009 /* VIPR */ = {
-			isa = PBXGroup;
-			children = (
-				CAD910442C90AF9F00EF1009 /* Router */,
-				CAD910412C90AF6100EF1009 /* Presenter */,
-				CAD9103E2C90AEC900EF1009 /* Interactor */,
-				CAD9103B2C90AE7C00EF1009 /* View */,
-			);
-			path = VIPR;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +197,6 @@
 			files = (
 				CAD9102A2C90954F00EF1009 /* Assets.xcassets in Resources */,
 				CAD9102D2C90954F00EF1009 /* Base in Resources */,
-				CAD910282C90954D00EF1009 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,22 +208,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD910512C90CCCA00EF1009 /* CityDetailPresenter.swift in Sources */,
+				CAD910CA2C94CDFC00EF1009 /* WeatherAPI.swift in Sources */,
 				CAD910432C90AF7A00EF1009 /* CityListPresenter.swift in Sources */,
+				CAD910CC2C94CE6700EF1009 /* WeatherResponse.swift in Sources */,
 				CAD9103D2C90AEA400EF1009 /* CityListViewController.swift in Sources */,
-				CAD910C12C91CCB200EF1009 /* SearchCityInteractor.swift in Sources */,
-				CAD910352C90AD0300EF1009 /* WeatherService.swift in Sources */,
-				CAD9104B2C90CAD100EF1009 /* SearchCityViewController.swift in Sources */,
-				CAD910372C90AD5300EF1009 /* WeatherData.swift in Sources */,
 				CAD910402C90AF0300EF1009 /* CityListInteractor.swift in Sources */,
 				CAD9104F2C90CCA900EF1009 /* CityDetailInteractor.swift in Sources */,
-				CAD910552C90F04600EF1009 /* SearchCityPresenter.swift in Sources */,
 				CAD910462C90AFC200EF1009 /* CityListRouter.swift in Sources */,
 				CAD9104D2C90CC6D00EF1009 /* CityDetailViewController.swift in Sources */,
-				CAD910482C90B00400EF1009 /* City.swift in Sources */,
-				CAD910572C90F08800EF1009 /* SearchCityRouter.swift in Sources */,
+				CAD910D02C94D46800EF1009 /* CityDetailEntity.swift in Sources */,
 				CAD910212C90954D00EF1009 /* AppDelegate.swift in Sources */,
-				CAD910392C90AD9B00EF1009 /* ForecastData.swift in Sources */,
 				CAD910532C90CCE500EF1009 /* CityDetailRouter.swift in Sources */,
+				CAD910CE2C94CE8500EF1009 /* WeatherForecastResponse.swift in Sources */,
 				CAD910232C90954D00EF1009 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +227,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CAD910262C90954D00EF1009 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAD910272C90954D00EF1009 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CAD9102B2C90954F00EF1009 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
