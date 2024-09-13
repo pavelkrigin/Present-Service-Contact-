@@ -22,25 +22,25 @@ final class CitiesListPresenter: CitiesListPresenterInput {
     private let interactor: CitiesListInteractorInput
     weak var view: CitiesListPresenterOutput?
     
-    private var cities = ["London", "Moscow", "New York"] // Список городов по умолчанию
-
+    private var cities = ["London", "Moscow", "New York"]
+    
     init(interactor: CitiesListInteractorInput) {
         self.interactor = interactor
     }
-
-    // Метод для загрузки погоды для городов
+    
     func loadCitiesWeather() {
         interactor.fetchWeatherForCities(cities)
     }
 }
 
+// MARK: - Extension
 extension CitiesListPresenter: CitiesListInteractorOutput {
-    // Метод для получения данных о погоде от Interactor
+    
     func didFetchWeatherData(_ data: [String: Double]) {
         view?.showCitiesWeather(data)
     }
     
-    // Метод для обработки ошибки от Interactor
+    
     func didFailFetchingWeatherData(with error: Error) {
         view?.showError(error)
     }

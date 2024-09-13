@@ -21,7 +21,7 @@ protocol CityDetailInteractorOutput: AnyObject {
 final class CityDetailInteractor: CityDetailInteractorInput {
     weak var presenter: CityDetailInteractorOutput?
     private let weatherAPI = WeatherAPI()
-
+    
     func fetchWeatherDetail(for city: String, days: Int) {
         weatherAPI.fetchWeatherForecast(for: city, days: days) { [weak self] result in
             switch result {
@@ -44,17 +44,17 @@ final class CityDetailInteractor: CityDetailInteractorInput {
 //MARK: - Structure
 struct ForecastResponse: Decodable {
     let list: [ForecastDay]
-
+    
     struct ForecastDay: Decodable {
         let dt: String
         let temp: Temperature
         let weather: [WeatherDescription]
     }
-
+    
     struct Temperature: Decodable {
         let day: Double
     }
-
+    
     struct WeatherDescription: Decodable {
         let description: String
     }
