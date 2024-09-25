@@ -7,7 +7,7 @@
 	<key>NSAllowsArbitraryLoads</key>
 	<true/>
 	<key>CFBundleIdentifier</key>
-	<string></string>
+	<string>Pavel-Krigin.Present-Service-Contact---</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
